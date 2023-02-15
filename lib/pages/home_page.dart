@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:parfume_app/main.dart';
 import 'menu_bar.dart';
+import 'parfume_list_view.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -27,10 +28,42 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  //Bottom Nav Bar Tapped Actions, navigationsları buraya koy.
+  void _onItemTapped(int NavBarindex) {
+    setState(() {
+      _selectedIndex = NavBarindex;
+    });
+  }
+
+  int _selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        bottomNavigationBar: BottomNavigationBar(
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          backgroundColor: appColors().menu,
+          elevation: 0,
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.favorite),
+              label: 'Favourites',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_cart),
+              label: 'Cart',
+            ),
+          ],
+          selectedItemColor: appColors().primary,
+          currentIndex: _selectedIndex,
+          onTap: _onItemTapped,
+        ),
         appBar: AppBar(
           toolbarHeight: 70,
           backgroundColor: appColors().primary,
@@ -97,11 +130,58 @@ class _HomePageState extends State<HomePage> {
             //showcase
             Expanded(
               child: Container(
-                decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
+                decoration: BoxDecoration(
+                    color: appColors().menu,
+                    borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(35),
                         topRight: Radius.circular(35))),
+                child: Center(
+                  child: Column(
+                    children: [
+                      // Tom Ford Parfume Heading
+                      Padding(
+                        padding: const EdgeInsets.all(25),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            RichText(
+                              text: TextSpan(
+                                text: 'Tom Ford ',
+                                style: TextStyle(
+                                    color: appColors().primary,
+                                    fontSize: 23,
+                                    fontWeight: FontWeight.bold),
+                                children: <TextSpan>[
+                                  TextSpan(
+                                      text: 'Parfume',
+                                      style: TextStyle(
+                                          color: appColors().primary,
+                                          fontWeight: FontWeight.w400)),
+                                ],
+                              ),
+                            ),
+                            Container(
+                              decoration: BoxDecoration(
+                                  color: appColors().primary,
+                                  borderRadius: const BorderRadius.all(
+                                      Radius.circular(20))),
+                              child: const Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Text(
+                                  'See All',
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 12),
+                                ),
+                              ),
+                            ),
+                            // Parfume List View
+                          ],
+                        ),
+                      ),
+                      const ParfumeListView()
+                    ],
+                  ),
+                ),
               ),
             ),
           ],

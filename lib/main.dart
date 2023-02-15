@@ -8,6 +8,7 @@ void main() {
 // ignore: camel_case_types
 class appColors {
   Color primary = const Color(0xFF00403e);
+  Color menu = const Color(0xFFf8f9fc);
 }
 
 class MyApp extends StatelessWidget {
