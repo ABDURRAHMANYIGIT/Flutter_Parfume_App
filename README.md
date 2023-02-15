@@ -1,7 +1,7 @@
 # Flutter Parfume App Exercise
 
 This is my Flutter Parfume App exercise. 
-Founded the design on Dribbble and trying to clone it to improve my layouting and programming skills. Im building the project responsive and compatible with design patterns. I also try hard to write clean code. I will update the README file through the process. 
+Founded the design on Dribbble and trying to clone it to improve my layouting and programming skills. I gonna build the project responsive and compatible with design patterns. I'll also try hard to write clean code. I will update the README file through the process. 
 
 ![image_processing20200412-25320-1u2o2ez](https://user-images.githubusercontent.com/69268069/219046569-b63578d8-4c76-4bf3-8633-0570e6950cc7.png)
 
