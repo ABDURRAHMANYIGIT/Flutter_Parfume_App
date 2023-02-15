@@ -1,16 +1,4 @@
-# parfume_app
+This is my Flutter Parfume App Example. 
+Founded the design on Dribbble and trying to clone it to improve my layouting and programming skills.
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![image_processing20200412-25320-1u2o2ez](https://user-images.githubusercontent.com/69268069/219046569-b63578d8-4c76-4bf3-8633-0570e6950cc7.png)
