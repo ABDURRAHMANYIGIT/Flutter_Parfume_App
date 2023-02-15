@@ -12,7 +12,7 @@ I started the project. Created AppBar, bottomNavigationBar and icons. Then creat
 
 
 ## Day 2
-I created a white container. I also worked on the part where the perfumes are shown, but it was not as shown in the image as you can see below, I will continue to work tomorrow
+I created a white container. I also worked on the part where the perfumes are shown, but it doesn't look like the referenced design as you can see below, I will continue to work tomorrow
 
 ![Screenshot_1676480264](https://user-images.githubusercontent.com/69268069/219099157-d043bf8b-9870-4a7b-9570-d351483ceaa1.png)
 
