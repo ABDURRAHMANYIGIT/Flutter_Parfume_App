@@ -34,34 +34,34 @@ class _ParfumeListViewState extends State<ParfumeListView> {
         ),
         Column(
           children: [
-            const Text(
-              'Tom Ford',
-              style: TextStyle(fontSize: 14, fontWeight: FontWeight.w300),
-            ),
-            const SizedBox(
-              height: 3,
-            ),
-            const Text(
-              'NEROLI PORTOFINO',
-              style: TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
-            ),
-            const SizedBox(
-              height: 4,
-            ),
-            const Text(
-              'Spray 50 ml',
-              style: TextStyle(fontSize: 13, fontWeight: FontWeight.w500),
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            const Text(
-              "\$335",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
-            ),
-            const SizedBox(
-              height: 30,
-            ),
+            // const Text(
+            //   'Tom Ford',
+            //   style: TextStyle(fontSize: 14, fontWeight: FontWeight.w300),
+            // ),
+            // const SizedBox(
+            //   height: 3,
+            // ),
+            // const Text(
+            //   'NEROLI PORTOFINO',
+            //   style: TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
+            // ),
+            // const SizedBox(
+            //   height: 4,
+            // ),
+            // const Text(
+            //   'Spray 50 ml',
+            //   style: TextStyle(fontSize: 13, fontWeight: FontWeight.w500),
+            // ),
+            // const SizedBox(
+            //   height: 15,
+            // ),
+            // const Text(
+            //   "\$335",
+            //   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
+            // ),
+            // const SizedBox(
+            //   height: 30,
+            // ),
           ],
         ),
       ]),
