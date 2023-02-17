@@ -16,3 +16,11 @@ I created a white container. I also worked on the part where the perfumes are sh
 
 ![Screenshot_1676480264](https://user-images.githubusercontent.com/69268069/219099157-d043bf8b-9870-4a7b-9570-d351483ceaa1.png)
 
+## Day 3
+Today i worked on layouting parfume images. I was able to create a [custom widget](https://github.com/ABDURRAHMANYIGIT/Flutter_Parfume_App/blob/master/lib/pages/parfume_list_view.dart) and use it inside of ListView.builder. In this way, I believe that I have created a more accurate architecture for the updates to be made in the list. The sizes are not the same as I found the perfume pictures online. I thought of two solutions for this:  
+**_1- Developing an architecture that can adjust the scale of the images in the [custom widget](https://github.com/ABDURRAHMANYIGIT/Flutter_Parfume_App/blob/master/lib/pages/parfume_list_view.dart) I created._**  
+**_2- Manually resize the images to the same size._**  
+Tomorrow I will try the first way first because it is more programming prone if not I will try the second way.
+
+https://user-images.githubusercontent.com/69268069/219652242-0aa33e19-12b3-44a6-bca0-cfcd96398df7.mp4
+
