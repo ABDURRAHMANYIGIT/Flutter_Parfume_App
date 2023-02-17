@@ -1,70 +1,90 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 
-class ParfumeListView extends StatefulWidget {
-  const ParfumeListView({super.key});
+class ParfumeListView extends StatelessWidget {
+  final String ParfumeName;
+  final String ParfumeDetails;
+  final String ParfumePrice;
+  final String ParfumeAssetPath;
+  // final VoidCallback ParfumeViewOnTap;
+  const ParfumeListView(
+      {Key? key,
+      required this.ParfumeName,
+      required this.ParfumeDetails,
+      required this.ParfumePrice,
+      required this.ParfumeAssetPath})
+      : super(key: key);
 
-  @override
-  State<ParfumeListView> createState() => _ParfumeListViewState();
-}
-
-class _ParfumeListViewState extends State<ParfumeListView> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(60),
-      child: Stack(children: [
-        Center(
-          child: Container(
-            height: 230,
-            width: 170,
-            decoration: const BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.all(Radius.circular(20)),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black12,
-                  blurRadius: 10.0,
-                ),
-              ],
+    return
+        //white space
+        Padding(
+      padding: const EdgeInsets.only(left: 30),
+      child: Container(
+        decoration: const BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.all(Radius.circular(20)),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black12,
+              blurRadius: 10.0,
             ),
-          ),
-        ),
-        Image.asset(
-          'asset/2.png',
-        ),
-        Column(
-          children: [
-            // const Text(
-            //   'Tom Ford',
-            //   style: TextStyle(fontSize: 14, fontWeight: FontWeight.w300),
-            // ),
-            // const SizedBox(
-            //   height: 3,
-            // ),
-            // const Text(
-            //   'NEROLI PORTOFINO',
-            //   style: TextStyle(fontSize: 14, fontWeight: FontWeight.w800),
-            // ),
-            // const SizedBox(
-            //   height: 4,
-            // ),
-            // const Text(
-            //   'Spray 50 ml',
-            //   style: TextStyle(fontSize: 13, fontWeight: FontWeight.w500),
-            // ),
-            // const SizedBox(
-            //   height: 15,
-            // ),
-            // const Text(
-            //   "\$335",
-            //   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
-            // ),
-            // const SizedBox(
-            //   height: 30,
-            // ),
           ],
         ),
-      ]),
+        //text section
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 10),
+              child: Container(
+                height: 120,
+                width: 100,
+                child: FittedBox(
+                  fit: BoxFit.contain,
+                  child: Image.asset(
+                    ParfumeAssetPath,
+                  ),
+                ),
+              ),
+            ),
+            Column(children: [
+              const SizedBox(
+                height: 15,
+              ),
+              const Text(
+                'Tom Ford',
+                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+              ),
+              const SizedBox(
+                height: 3,
+              ),
+              Text(
+                ParfumeName,
+                style:
+                    const TextStyle(fontSize: 16, fontWeight: FontWeight.w800),
+              ),
+              const SizedBox(
+                height: 4,
+              ),
+              Text(
+                ParfumeDetails,
+                style:
+                    const TextStyle(fontSize: 13, fontWeight: FontWeight.w400),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              Text(
+                ParfumePrice,
+                style:
+                    const TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
+              ),
+            ])
+          ],
+        ),
+      ),
     );
   }
 }

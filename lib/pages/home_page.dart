@@ -17,7 +17,14 @@ class _HomePageState extends State<HomePage> {
     ['Natural', false],
     ['Newest', false],
   ];
-
+  List<List<dynamic>> ParfumeList = [
+    ['Neroli Portofino', '\$349', '50 ML', 'asset/1.png'],
+    ['Tabacco Oud', '\$299', '60 ML', 'asset/2.png'],
+    ['Rose Prick', '\$229', '75 ML', 'asset/3.png'],
+    ['Bitter Peach', '\$199', '50 ML', 'asset/4.png'],
+    ['Noır de Noır', '\$159', '40 ML', 'asset/5.png'],
+    ['Lost Cherry', '\$249', '750 ML', 'asset/6.png'],
+  ];
   // ignore: non_constant_identifier_names
   void MenuTypeSelected(int index) {
     setState(() {
@@ -178,7 +185,22 @@ class _HomePageState extends State<HomePage> {
                           ],
                         ),
                       ),
-                      const ParfumeListView()
+                      SizedBox(
+                        height: 250, //height of white container
+                        width: 170,
+                        child: ListView.builder(
+                          itemCount: ParfumeList.length,
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder: (BuildContext context, int index) {
+                            return ParfumeListView(
+                              ParfumeName: ParfumeList[index][0],
+                              ParfumePrice: ParfumeList[index][1],
+                              ParfumeDetails: ParfumeList[index][2],
+                              ParfumeAssetPath: ParfumeList[index][3],
+                            );
+                          },
+                        ),
+                      )
                     ],
                   ),
                 ),
