@@ -1,7 +1,10 @@
+// ignore_for_file: non_constant_identifier_names, duplicate_ignore
+
 import 'package:flutter/material.dart';
 import 'package:parfume_app/main.dart';
 import 'menu_bar.dart';
 import 'parfume_list_view.dart';
+import 'chosen_parfume_details_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -11,12 +14,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  //Menu List
   List<List<dynamic>> menuList = [
     ['All', true],
     ['Popular', false],
     ['Natural', false],
     ['Newest', false],
   ];
+  //Parfume İnfo list
   List<List<dynamic>> ParfumeList = [
     ['Neroli Portofino', '\$349', '50 ML', 'asset/1.png'],
     ['Tabacco Oud', '\$299', '60 ML', 'asset/2.png'],
@@ -27,6 +32,7 @@ class _HomePageState extends State<HomePage> {
   ];
   // ignore: non_constant_identifier_names
   void MenuTypeSelected(int index) {
+    //Function that works when menu type selected
     setState(() {
       for (int i = 0; i < menuList.length; i++) {
         menuList[i][1] = false;
@@ -35,14 +41,20 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  //Bottom Nav Bar Tapped Actions, navigationsları buraya koy.
   void _onItemTapped(int NavBarindex) {
+    //Bottom Nav Bar Tapped Actions, navigationsları buraya koy.
     setState(() {
       _selectedIndex = NavBarindex;
     });
   }
 
-  int _selectedIndex = 0;
+  void ParfumeViewSelected() {
+    //Funciton that works when tapped on white container which means you choosed the parfume
+    Navigator.of(context).push(MaterialPageRoute(
+        builder: ((context) => const Chosen_Parfume_DetailsPage())));
+  }
+
+  int _selectedIndex = 0; //A variable for changing between menu bar elements
 
   @override
   Widget build(BuildContext context) {
@@ -88,7 +100,7 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(
               height: 10,
             ),
-            //search bar
+            //Search Bar
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),
               child: TextField(
@@ -118,7 +130,7 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(
               height: 25,
             ),
-            //menus
+            //Menus
             SizedBox(
               height: 45,
               child: ListView.builder(
@@ -134,7 +146,7 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
             ),
-            //showcase
+            //Showcase
             Expanded(
               child: Container(
                 decoration: BoxDecoration(
@@ -181,13 +193,13 @@ class _HomePageState extends State<HomePage> {
                                 ),
                               ),
                             ),
-                            // Parfume List View
                           ],
                         ),
                       ),
+                      // PARFUME VİEWİNG WHİTE CONTAİNER FİELD
                       SizedBox(
                         height: 250, //height of white container
-                        width: 170,
+                        width: double.infinity,
                         child: ListView.builder(
                           itemCount: ParfumeList.length,
                           scrollDirection: Axis.horizontal,
@@ -197,6 +209,7 @@ class _HomePageState extends State<HomePage> {
                               ParfumePrice: ParfumeList[index][1],
                               ParfumeDetails: ParfumeList[index][2],
                               ParfumeAssetPath: ParfumeList[index][3],
+                              ParfumeViewOnTap: ParfumeViewSelected,
                             );
                           },
                         ),

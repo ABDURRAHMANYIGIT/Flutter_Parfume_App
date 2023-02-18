@@ -23,6 +23,7 @@ class ParfumeListView extends StatelessWidget {
         Padding(
       padding: const EdgeInsets.only(left: 30),
       child: Container(
+        width: 170,
         decoration: const BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.all(Radius.circular(20)),
