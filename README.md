@@ -24,3 +24,10 @@ Tomorrow I will try the first way first because it is more programming prone if 
 
 https://user-images.githubusercontent.com/69268069/219652242-0aa33e19-12b3-44a6-bca0-cfcd96398df7.mp4
 
+## Day 4
+Today I first solved the problem from yesterday that the images are not the same size. I got around this problem by using the fit:BoxFit.contain property of the FittedBox widget. Then I created a structure where I can follow the user's actions using the GestureDetector widget. I used this in a structure that transfers the selected perfume to the detail page when the area where the perfumes are displayed is touched. I provided the navigation between the pages with Navigator. On the detail page, I resized the perfume image using FittedBox and added BoxShadow and blur to the back of the image to make it more visible and stand out from the background. My goal for tomorrow is to make the detail page view I created dynamic by creating an architecture like I did in the previous days. I aim to use a single code for all perfumes by making the prototype code of the detail page a reusable widget. I think I can't express what I want to do in terms of terms, since I've only just started learning it, I'm sorry. If I couldn't explain what I'm talking about, you can check it out for yourself!
+
+
+https://user-images.githubusercontent.com/69268069/219901504-98232d8a-80b3-4837-a9b0-4d5680d0eb31.mp4
+
+
