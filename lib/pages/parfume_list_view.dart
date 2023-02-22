@@ -18,7 +18,9 @@ class ParfumeListView extends StatelessWidget {
       : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(
+    BuildContext context,
+  ) {
     return GestureDetector(
       //white space
       onTap: ParfumeViewOnTap,
@@ -41,7 +43,7 @@ class ParfumeListView extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 10),
-                child: Container(
+                child: SizedBox(
                   height: 120,
                   width: 100,
                   child: FittedBox(

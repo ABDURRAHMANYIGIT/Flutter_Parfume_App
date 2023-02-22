@@ -16,13 +16,25 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   //Menu List
   List<List<dynamic>> menuList = [
-    ['All', true],
-    ['Popular', false],
-    ['Natural', false],
-    ['Newest', false],
+    [
+      'All',
+      true,
+    ],
+    [
+      'Popular',
+      false,
+    ],
+    [
+      'Natural',
+      false,
+    ],
+    [
+      'Newest',
+      false,
+    ],
   ];
-  //Parfume İnfo list
-  List<List<dynamic>> ParfumeList = [
+
+  final List<List<String>> ParfumeList = [
     ['Neroli Portofino', '\$349', '50 ML', 'asset/1.png'],
     ['Tabacco Oud', '\$299', '60 ML', 'asset/2.png'],
     ['Rose Prick', '\$229', '75 ML', 'asset/3.png'],
@@ -30,6 +42,7 @@ class _HomePageState extends State<HomePage> {
     ['Noır de Noır', '\$159', '40 ML', 'asset/5.png'],
     ['Lost Cherry', '\$249', '750 ML', 'asset/6.png'],
   ];
+
   // ignore: non_constant_identifier_names
   void MenuTypeSelected(int index) {
     //Function that works when menu type selected
@@ -138,9 +151,10 @@ class _HomePageState extends State<HomePage> {
                 itemCount: menuList.length,
                 itemBuilder: (BuildContext context, int index) {
                   return MenuBar(
+                      index: index,
                       menuName: menuList[index][0],
                       isSelected: menuList[index][1],
-                      ontap: () {
+                      ontap: (int index) {
                         MenuTypeSelected(index);
                       });
                 },

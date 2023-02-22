@@ -3,50 +3,15 @@
 import 'package:flutter/material.dart';
 import 'package:parfume_app/main.dart';
 
-class Chosen_Parfume_DetailsPage extends StatefulWidget {
-  const Chosen_Parfume_DetailsPage({super.key});
-
-  @override
-  State<Chosen_Parfume_DetailsPage> createState() => _ParfumeDetailsPageState();
-}
-
-int _selectedIndex = 0;
-
-class _ParfumeDetailsPageState extends State<Chosen_Parfume_DetailsPage> {
-  void _onItemTapped(int NavBarindex) {
-    //Bottom Nav Bar Tapped Actions, navigationsları buraya koy.
-    setState(() {
-      _selectedIndex = NavBarindex;
-    });
-  }
+class Chosen_Parfume_DetailsPage extends StatelessWidget {
+  const Chosen_Parfume_DetailsPage({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            bottomNavigationBar: BottomNavigationBar(
-              showSelectedLabels: false,
-              showUnselectedLabels: false,
-              backgroundColor: appColors().menu,
-              elevation: 0,
-              items: const <BottomNavigationBarItem>[
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.home),
-                  label: 'Home',
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.favorite),
-                  label: 'Favourites',
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(Icons.shopping_cart),
-                  label: 'Cart',
-                ),
-              ],
-              selectedItemColor: appColors().primary,
-              currentIndex: _selectedIndex,
-              onTap: _onItemTapped,
-            ),
             appBar: AppBar(
               toolbarHeight: 70,
               backgroundColor: appColors().primary,
@@ -61,9 +26,9 @@ class _ParfumeDetailsPageState extends State<Chosen_Parfume_DetailsPage> {
             body: Align(
               alignment: Alignment.bottomCenter,
               child: Container(
-                height: 600,
+                height: 650,
                 width: double.infinity,
-                //White showcase
+                //White showcase decoration
                 decoration: BoxDecoration(
                     color: appColors().menu,
                     borderRadius: const BorderRadius.only(
@@ -90,9 +55,7 @@ class _ParfumeDetailsPageState extends State<Chosen_Parfume_DetailsPage> {
                         ),
                         child: FittedBox(
                           fit: BoxFit.contain,
-                          child: Image.asset(
-                            'asset/1.png',
-                          ),
+                          child: Image.asset('asset/1.png'),
                         ),
                       ),
                     ),
@@ -115,7 +78,7 @@ class _ParfumeDetailsPageState extends State<Chosen_Parfume_DetailsPage> {
                                 height: 8,
                               ),
                               Text(
-                                'TOBACCO OUD',
+                                'NEROLI PORTOFINO',
                                 style: TextStyle(
                                   color: appColors().primary,
                                   fontSize: 24,
@@ -156,3 +119,12 @@ class _ParfumeDetailsPageState extends State<Chosen_Parfume_DetailsPage> {
             )));
   }
 }
+
+final List ParfumeList = [
+  ['Neroli Portofino', '\$349', '50 ML', 'asset/1.png'],
+  ['Tabacco Oud', '\$299', '60 ML', 'asset/2.png'],
+  ['Rose Prick', '\$229', '75 ML', 'asset/3.png'],
+  ['Bitter Peach', '\$199', '50 ML', 'asset/4.png'],
+  ['Noır de Noır', '\$159', '40 ML', 'asset/5.png'],
+  ['Lost Cherry', '\$249', '750 ML', 'asset/6.png'],
+];
