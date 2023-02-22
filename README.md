@@ -30,4 +30,6 @@ Today I first solved the problem from yesterday that the images are not the same
 
 https://user-images.githubusercontent.com/69268069/219901504-98232d8a-80b3-4837-a9b0-4d5680d0eb31.mp4
 
+## Day 5 - Ends of the Project
 
+I finished this project. It was a very good practice for me in the layout and programming part, I added a lot to myself. When I clicked on the Menu Bar and Perfume display area, I could not be directed to the relevant page. because I couldn't build the project architecture accordingly from the beginning and I didn't want to deal with making the architecture smooth by making modifications. I don't want to be stuck on one project, I want to do as many projects as possible. In other projects, I will focus more on this subject and try to write more Clean Code. I have learned many lessons from this project and these will guide me in my future projects. Thanks to everyone who followed. Good work everyone!
