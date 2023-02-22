@@ -1,7 +1,7 @@
 # Flutter Parfume App Exercise
 
 This is my Flutter Parfume App exercise. 
-Founded the design on Dribbble and trying to clone it to improve my layouting and programming skills. I gonna build the project responsive and compatible with design patterns. I'll also try hard to write clean code. I will update the README file throughout the process. 
+Founded the design on Dribbble and trying to clone it to improve my layouting and programming skills. Im gonna build the project responsive and compatible with design patterns. I'll also try hard to write clean code. I will update the README file throughout the process. 
 
 ![image_processing20200412-25320-1u2o2ez](https://user-images.githubusercontent.com/69268069/219046569-b63578d8-4c76-4bf3-8633-0570e6950cc7.png)
 
@@ -23,4 +23,11 @@ Today i worked on layouting parfume images. I was able to create a [custom widge
 Tomorrow I will try the first way first because it is more programming prone if not I will try the second way.
 
 https://user-images.githubusercontent.com/69268069/219652242-0aa33e19-12b3-44a6-bca0-cfcd96398df7.mp4
+
+## Day 4
+Today I first solved the problem from yesterday that the images are not the same size. I got around this problem by using the fit:BoxFit.contain property of the FittedBox widget. Then I created a structure where I can follow the user's actions using the GestureDetector widget. I used this in a structure that transfers the selected perfume to the detail page when the area where the perfumes are displayed is touched. I provided the navigation between the pages with Navigator. On the detail page, I resized the perfume image using FittedBox and added BoxShadow and blur to the back of the image to make it more visible and stand out from the background. My goal for tomorrow is to make the detail page view I created dynamic by creating an architecture like I did in the previous days. I aim to use a single code for all perfumes by making the prototype code of the detail page a reusable widget. I think I can't express what I want to do in terms of terms, since I've only just started learning it, I'm sorry. If I couldn't explain what I'm talking about, you can check it out for yourself!
+
+
+https://user-images.githubusercontent.com/69268069/219901504-98232d8a-80b3-4837-a9b0-4d5680d0eb31.mp4
+
 
